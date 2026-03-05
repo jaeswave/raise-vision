@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useReveal'
 
 // Logistics images from Unsplash
-const HERO_BG = 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1800&q=85'
-const ABOUT_IMG = 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=900&q=80'
-const PORT_IMG = 'https://images.unsplash.com/photo-1494961104209-3c223057bd26?w=800&q=80'
+const HERO_BG = '/project-15.png'
+const ABOUT_IMG = '/project-10.png'
+const PORT_IMG = '/project-9.png'
 const AIR_IMG = 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80'
-const ROAD_IMG = 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80'
+const ROAD_IMG = '/project-7.png'
 
 const STATS = [
   { num: '2007', label: 'Year Founded' },
@@ -137,7 +137,7 @@ export default function HomePage() {
               Incorporated in 2007 under CAMA, Raisevision and Company Limited has built one of Nigeria's most trusted reputations in clearing, forwarding, and integrated logistics. From port operations at Apapa to air freight coordination and inland haulage, we manage every link in the chain.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8 reveal d3" style={{ fontFamily: 'Barlow, sans-serif' }}>
-              Our sister companies — <strong>Power Cargo Limited</strong> and <strong>Tookevision Nigeria Limited</strong> — expand our operational capacity without compromising our focus.
+              Our sister companies — <strong>Power Cargo International Limited</strong> and <strong>Tookevision Nigeria Limited</strong> — expand our operational capacity without compromising our focus.
             </p>
             <div className="flex gap-4 reveal d4">
               <Link to="/about" className="btn-navy">Learn More</Link>
@@ -148,11 +148,14 @@ export default function HomePage() {
             <div className="img-overlay aspect-[4/3] overflow-hidden">
               <img src={ABOUT_IMG} alt="Logistics operations" className="w-full h-full object-cover" loading="lazy" />
             </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-5 -left-5 bg-forest-500 text-white px-5 py-4 shadow-xl">
-              <div className="font-display font-black text-3xl">17+</div>
-              <div className="text-xs tracking-widest uppercase opacity-80"
-                style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Years Experience</div>
+            {/* Floating badge with real project reference */}
+            <div className="absolute -bottom-5 -left-5 shadow-2xl overflow-hidden" style={{ width: 160 }}>
+              <img src="/project-3.png" alt="TCN project" className="w-full h-20 object-cover" />
+              <div className="px-3 py-2" style={{ background: '#2E8B57' }}>
+                <div className="text-white font-display font-black text-sm tracking-wide">TCN PROJECT</div>
+                <div className="text-white/70 text-[10px] tracking-widest uppercase"
+                  style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>100/110 MVA Transformer</div>
+              </div>
             </div>
           </div>
         </div>
@@ -208,7 +211,7 @@ export default function HomePage() {
             Trusted by leading organisations
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {['Maersk', 'MSC', 'Transmission Company of Nigeria', 'Afe Babalola University', 'Siemens Projects', 'Power Cargo Ltd'].map((c, i) => (
+            {['Maersk', 'MSC', 'Transmission Company of Nigeria', 'Afe Babalola University', 'Adlinco Construction', 'Equal Engineering', 'Power Cargo International'].map((c, i) => (
               <span key={i} className={`text-white/50 font-display font-bold text-lg uppercase tracking-widest hover:text-white transition-colors reveal d${Math.min(i + 1, 6)}`}>
                 {c}
               </span>

@@ -8,15 +8,15 @@ const SERVICES = [
     tagline: 'Nigeria\'s ports, handled with expertise.',
     desc: 'From pre-arrival documentation to final release, our clearing team manages every step with the NCS and port authorities. We specialise in Apapa, Tin-Can, and all major Nigerian terminals.',
     points: ['Pre-arrival documentation', 'Customs duty computation', 'Terminal handling', 'Bill of lading processing', 'SON/NAFDAC liaison'],
-    img: 'https://images.unsplash.com/photo-1494961104209-3c223057bd26?w=800&q=80',
+    img: '/project-4.png',
     color: '#2E8B57',
   },
   {
     id: 2, icon: '🚢', title: 'Sea Freight Logistics',
     tagline: 'FCL and LCL from any origin worldwide.',
-    desc: 'We coordinate full-container and groupage shipments from major global origins into Nigerian ports. Our relationships with shipping lines ensure competitive rates and priority booking.',
+    desc: 'We coordinate FCL and LCL shipments from major global origins. Our established relationships with Maersk, MSC, CMA CGM, PTML Grimaldi, Comet Shipping, PIL, COSCO/OOCL and others ensure competitive rates and priority booking.',
     points: ['FCL & LCL shipments', 'Consolidation services', 'Freight rate negotiation', 'Vessel tracking', 'Port of origin liaison'],
-    img: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80',
+    img: '/project-11.png',
     color: '#003380',
   },
   {

@@ -9,7 +9,7 @@ export default function AboutPage() {
       {/* Page Hero */}
       <section className="relative py-24 overflow-hidden" style={{ background: '#001F4D' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1600&q=80"
+          <img src="/project-16.png"
             alt="Port" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,31,77,0.98) 40%, rgba(0,31,77,0.7))' }} />
         </div>
@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div className="space-y-4 text-gray-600 leading-relaxed reveal d2" style={{ fontFamily: 'Barlow, sans-serif' }}>
               <p>Raisevision and Company Limited was incorporated in <strong>2007</strong> under the Companies and Allied Matters Act (CAMA 1990). From our base in Apapa, Lagos — Nigeria's busiest port corridor — we have built a reputation defined by reliability, compliance, and operational excellence.</p>
               <p>While clearing and forwarding remains our flagship service, our expertise extends across the entire logistics value chain: sea freight, air cargo, road haulage, warehousing, customs advisory, and export facilitation.</p>
-              <p>Our sister companies — <strong>Power Cargo Limited</strong> and <strong>Tookevision Nigeria Limited</strong> — extend our operational capacity, allowing us to handle large-scale and complex logistics assignments without losing the personal service that defines our brand.</p>
+              <p>Our sister companies — <strong>Power Cargo International Limited</strong> and <strong>Tookevision Nigeria Limited</strong> — extend our operational capacity, allowing us to handle large-scale and complex logistics assignments without losing the personal service that defines our brand.</p>
             </div>
           </div>
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { name: 'Raisevision & Co. Ltd', role: 'Flagship Company', desc: 'Clearing, forwarding, freight management, customs advisory, and export facilitation. The cornerstone of the group.', accent: '#2E8B57' },
-              { name: 'Power Cargo Limited', role: 'Sister Company', desc: 'Specialised cargo handling and power sector logistics. Focused on infrastructure and energy project delivery.', accent: '#001F4D' },
+              { name: 'Power Cargo International Limited', role: 'Sister Company', desc: 'Specialised cargo handling and power sector logistics. Focused on infrastructure and energy project delivery.', accent: '#001F4D' },
               { name: 'Tookevision Nigeria Ltd', role: 'Sister Company', desc: 'Extended customs and port operations support. Reinforcing the group\'s capacity at all major Nigerian terminals.', accent: '#C9922A' },
             ].map(({ name, role, desc, accent }, i) => (
               <div key={i} className={`bg-white p-8 service-card reveal d${i + 1}`}

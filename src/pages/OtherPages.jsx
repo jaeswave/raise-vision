@@ -3,16 +3,25 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useReveal'
 
+// All real project photos — TCN Power Transformer project, Apapa Port & site delivery
 const GALLERY_IMAGES = [
-  { src: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800&q=80', caption: 'Container Terminal Operations' },
-  { src: 'https://images.unsplash.com/photo-1494961104209-3c223057bd26?w=800&q=80', caption: 'Port Clearance — Apapa Terminal' },
-  { src: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80', caption: 'Air Freight — Lagos International' },
-  { src: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80', caption: 'Nationwide Road Haulage' },
-  { src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80', caption: 'Warehouse & Cargo Handling' },
-  { src: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&q=80', caption: 'Cargo Documentation Centre' },
-  { src: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&q=80', caption: 'Heavy Equipment Logistics' },
-  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80', caption: 'Freight Coordination Hub' },
-  { src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80', caption: 'Compliance & Documentation' },
+  { src: '/project-10.png', caption: 'Port Inspection — Raisevision Team at Apapa Terminal', real: true },
+  { src: '/project-7.png',  caption: 'Transformer Loaded onto Low-Bed Trailer — Ready for Haulage', real: true },
+  { src: '/project-12.png', caption: 'Team Inspection at Apapa Port — Equipment Verification', real: true },
+  { src: '/project-2.png',  caption: 'Multiple Power Transformers — Apapa Port Staging Area', real: true },
+  { src: '/project-14.png', caption: 'Liebherr Crane — Heavy-Lift Port Operations', real: true },
+  { src: '/project-15.png', caption: 'Transformer on Low-Bed Trailer — Departing Port', real: true },
+  { src: '/project-13.png', caption: 'Site Supervisor with Documentation — Port Operations', real: true },
+  { src: '/project-4.png',  caption: 'Transformer at Apapa Terminal — Pre-Haulage Staging', real: true },
+  { src: '/project-11.png', caption: 'Low-Bed Transport — Transformer En Route to Substation', real: true },
+  { src: '/project-9.png',  caption: 'Transformer Delivered to TCN Substation — Site Ready', real: true },
+  { src: '/project-6.png',  caption: 'Equipment Detail — Transformer Base at Port', real: true },
+  { src: '/project-16.png', caption: 'Heavy-Lift Operation — Crane and Trailer Coordination', real: true },
+  { src: '/project-17.png', caption: 'Port Infrastructure — Liebherr Crane Operations, Apapa', real: true },
+  { src: '/project-3.png',  caption: '100/110 MVA Transformer — Side Profile at Apapa', real: true },
+  { src: '/project-5.png',  caption: 'Raisevision Field Team — Cargo Inspection & Clearance', real: true },
+  { src: '/project-8.png',  caption: 'Transformer at Substation — Final Site Delivery', real: true },
+  { src: '/project-1.png',  caption: 'Marshalling Box & Control Panel — Equipment Detail', real: true },
 ]
 
 export function GalleryPage() {
@@ -41,11 +50,26 @@ export function GalleryPage() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Real project highlight */}
+          <div className="mb-6 p-5 reveal" style={{ background: '#001F4D' }}>
+            <div className="flex items-center gap-3">
+              <span className="text-xs font-bold tracking-widest uppercase px-3 py-1" style={{ background: '#2E8B57', color: 'white', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Live Project</span>
+              <p className="text-white/70 text-sm" style={{ fontFamily: 'Barlow, sans-serif' }}>
+                100/110 MVA Power Transformers — Cleared and delivered for the Transmission Company of Nigeria (TCN)
+              </p>
+            </div>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {GALLERY_IMAGES.map(({ src, caption }, i) => (
-              <div key={i} className={`img-overlay overflow-hidden group reveal d${Math.min((i % 3) + 1, 6)} ${i === 0 || i === 4 ? 'md:col-span-2' : ''} ${i === 0 ? 'aspect-video' : 'aspect-square'}`}>
+            {GALLERY_IMAGES.map(({ src, caption, real }, i) => (
+              <div key={i} className={`img-overlay overflow-hidden group reveal d${Math.min((i % 3) + 1, 6)} ${i === 0 || i === 3 ? 'md:col-span-2' : ''} ${i === 0 ? 'aspect-video' : 'aspect-[4/3]'}`}>
                 <img src={src} alt={caption} loading="lazy" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/50 transition-all duration-400" />
+                {real && (
+                  <div className="absolute top-3 left-3 text-[10px] font-bold tracking-widest uppercase px-2.5 py-1"
+                    style={{ background: '#2E8B57', color: 'white', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                    Real Project
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-navy-900/0 group-hover:bg-navy-900/60 transition-all duration-400" />
                 <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <p className="text-white font-semibold text-sm uppercase tracking-wide"
                     style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>{caption}</p>
@@ -53,9 +77,6 @@ export function GalleryPage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-400 text-sm mt-10 italic" style={{ fontFamily: 'Barlow, sans-serif' }}>
-            Gallery images are representative. Upload your actual operations photos to replace these.
-          </p>
         </div>
       </section>
     </>
@@ -66,12 +87,14 @@ export function GalleryPage() {
 const CLIENTS = [
   { name: 'Maersk Line', sector: 'Shipping', desc: 'Coordinated clearance for Maersk container shipments at Apapa and Tin-Can terminals.' },
   { name: 'MSC Nigeria', sector: 'Shipping', desc: 'Ongoing partnership for FCL import clearance and documentation management.' },
-  { name: 'Transmission Company of Nigeria', sector: 'Power & Infrastructure', desc: 'Logistics support for power transmission equipment imports, including heavy lift coordination.' },
+  { name: 'Transmission Company of Nigeria', sector: 'Power & Infrastructure', desc: 'Logistics support for power transmission equipment imports, including specialist heavy-lift coordination for 100/110 MVA transformers.' },
   { name: 'Afe Babalola University', sector: 'Education', desc: 'Academic and laboratory equipment clearance and campus delivery coordination.' },
   { name: 'Sumogo Nigeria Limited', sector: 'Trade', desc: 'Regular import clearing and forwarding across multiple commodity lines.' },
   { name: 'Topfinger Investment Nig Ltd', sector: 'Investment', desc: 'Commercial goods clearance and documentation management.' },
   { name: 'Mantol Nigeria Limited', sector: 'Trade', desc: 'Sea freight coordination and customs clearance services.' },
   { name: 'Electrical Solution Limited', sector: 'Engineering', desc: 'Electrical equipment imports, NPA-cleared and delivered to site.' },
+  { name: 'Adlinco Construction Company', sector: 'Construction', desc: 'Construction materials and heavy equipment imports, cleared and coordinated for project delivery.' },
+  { name: 'Equal Engineering Limited', sector: 'Engineering', desc: 'Engineering components and industrial machinery clearance with full compliance documentation.' },
 ]
 
 export function ClientsPage() {
@@ -112,18 +135,55 @@ export function ClientsPage() {
             ))}
           </div>
 
-          {/* Siemens project */}
-          <div className="mt-12 p-8 reveal" style={{ background: '#001F4D' }}>
-            <div className="flex items-start gap-5">
-              <div className="w-14 h-14 flex items-center justify-center text-2xl flex-shrink-0"
-                style={{ background: '#2E8B57' }}>⚡</div>
-              <div>
+          {/* Shipping Lines */}
+          <div className="mt-10 mb-6">
+            <h3 className="font-display font-bold text-2xl uppercase mb-6 reveal" style={{ color: '#001F4D' }}>
+              Shipping Lines We Operate With
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+              {[
+                { name: 'Maersk Line', abbr: 'MAERSK' },
+                { name: 'MSC Nigeria', abbr: 'MSC' },
+                { name: 'CMA CGM Nigeria', abbr: 'CMA CGM' },
+                { name: 'PTML Grimaldi Group', abbr: 'GRIMALDI' },
+                { name: 'Comet Shipping Agency', abbr: 'COMET' },
+                { name: 'PIL Shipping Co.', abbr: 'PIL' },
+                { name: 'COSCO / OOCL', abbr: 'COSCO' },
+                { name: 'Hapag-Lloyd', abbr: 'HAPAG' },
+                { name: 'ZIM Line', abbr: 'ZIM' },
+                { name: 'K Line', abbr: 'K LINE' },
+              ].map(({ name, abbr }, i) => (
+                <div key={i} className={`p-4 text-center border border-gray-100 hover:border-forest-500 transition-all reveal d${Math.min((i % 5) + 1, 5)}`}
+                  style={{ background: '#F8FAFC' }}>
+                  <div className="font-display font-black text-xl mb-1" style={{ color: '#001F4D' }}>{abbr}</div>
+                  <p className="text-gray-400 text-xs leading-tight" style={{ fontFamily: 'Barlow, sans-serif' }}>{name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Featured project with real photos */}
+          <div className="mt-12 reveal" style={{ background: '#001F4D' }}>
+            <div className="grid md:grid-cols-2">
+              <div className="p-8">
                 <div className="text-xs tracking-widest uppercase font-semibold mb-2"
-                  style={{ color: '#C9922A', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Featured Project</div>
-                <h3 className="font-display font-bold text-2xl text-white uppercase mb-3">Siemens Infrastructure Projects</h3>
-                <p className="text-white/65 leading-relaxed" style={{ fontFamily: 'Barlow, sans-serif' }}>
-                  Delivered comprehensive logistics support for major power infrastructure projects involving Siemens equipment across Nigeria. Scope included port clearance at Apapa, specialist heavy lift haulage, and site delivery coordination for high-value electrical infrastructure.
+                  style={{ color: '#C9922A', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Featured Project — Apapa Port</div>
+                <h3 className="font-display font-bold text-2xl text-white uppercase mb-3">TCN Power Transformer Clearance</h3>
+                <p className="text-white/65 leading-relaxed mb-4" style={{ fontFamily: 'Barlow, sans-serif' }}>
+                  Raisevision successfully cleared and coordinated the delivery of multiple 100/110 MVA, 132/33 kV Voltamp power transformers for the Transmission Company of Nigeria. This involved specialist heavy-lift port operations at Apapa, full NCS documentation, and site-delivery coordination.
                 </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Heavy-Lift Clearance', 'NCS Compliance', 'TCN Delivery', '132/33 kV Equipment'].map(tag => (
+                    <span key={tag} className="text-[10px] font-semibold tracking-wider uppercase px-2.5 py-1 border border-white/20 text-white/50"
+                      style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-1 p-1">
+                <img src="/project-10.png" alt="Team at port" className="w-full h-32 object-cover" />
+                <img src="/project-7.png" alt="Loading on trailer" className="w-full h-32 object-cover" />
+                <img src="/project-9.png" alt="Substation delivery" className="w-full h-32 object-cover" />
+                <img src="/project-11.png" alt="Low-bed transport" className="w-full h-32 object-cover" />
               </div>
             </div>
           </div>
@@ -352,9 +412,16 @@ export function ContactPage() {
                     style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Service Required</label>
                   <select name="service" value={form.service} onChange={handle} className="input-field bg-white">
                     <option value="">Select a service...</option>
-                    {['Clearing & Forwarding', 'Sea Freight', 'Air Freight', 'Road Transport', 'Warehousing', 'Customs Advisory', 'Export Documentation'].map(s => (
-                      <option key={s}>{s}</option>
-                    ))}
+                    <optgroup label="── Logistics Services ──">
+                      {['Clearing & Forwarding', 'Sea Freight', 'Air Freight', 'Road Transport', 'Warehousing', 'Customs Advisory', 'Export Documentation'].map(s => (
+                        <option key={s}>{s}</option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="── Shipping Lines We Work With ──">
+                      {['Maersk Line', 'MSC Nigeria', 'CMA CGM Nigeria Shipping Limited', 'PTML Grimaldi Group', 'Comet Shipping Agency Nigeria Limited', 'PIL Shipping Company', 'COSCO Shipping / OOCL', 'Hapag-Lloyd', 'ZIM Line', 'K Line'].map(s => (
+                        <option key={s}>{s}</option>
+                      ))}
+                    </optgroup>
                   </select>
                 </div>
                 <div>
