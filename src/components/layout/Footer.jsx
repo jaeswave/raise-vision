@@ -77,7 +77,7 @@ export default function Footer() {
               </svg>
               @raisevisionlogistics
             </a>
-            <a href="https://twitter.com/raisevision" target="_blank" rel="noopener noreferrer"
+            <a href="https://twitter.com/Raisevision_" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 text-white/45 hover:text-white transition-colors duration-200 text-xs tracking-wider"
               style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

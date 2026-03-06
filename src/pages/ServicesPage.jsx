@@ -16,7 +16,7 @@ const SERVICES = [
     tagline: 'FCL and LCL from any origin worldwide.',
     desc: 'We coordinate FCL and LCL shipments from major global origins. Our established relationships with Maersk, MSC, CMA CGM, PTML Grimaldi, Comet Shipping, PIL, COSCO/OOCL and others ensure competitive rates and priority booking.',
     points: ['FCL & LCL shipments', 'Consolidation services', 'Freight rate negotiation', 'Vessel tracking', 'Port of origin liaison'],
-    img: '/project-15.png',
+    img: '/containers-port.png',
     color: '#003380',
   },
   {
@@ -48,7 +48,7 @@ const SERVICES = [
     tagline: 'Stay compliant, avoid penalties.',
     desc: 'We provide advisory services on Nigerian import/export regulations, HS code classification, duty optimisation, and NAFDAC/SON requirements so your business stays compliant and cost-efficient.',
     points: ['HS tariff classification', 'Import duty optimisation', 'NAFDAC & SON advisory', 'Form M processing', 'Trade compliance audits'],
-    img: '/compliance-team.png',
+    img: '/cargo-container.png',
     color: '#001F4D',
   },
   {

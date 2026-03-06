@@ -80,16 +80,14 @@ function VideoShowcase() {
             </div>
           </div>
 
-          {/* Secondary video or image */}
+          {/* Secondary video */}
           <div className="relative overflow-hidden reveal d2" style={{ background: '#0D1117', minHeight: 192 }}>
             <video
-              src="/videos/operations-1.mp4"
               autoPlay muted loop playsInline
-              className="w-full h-full object-cover"
-              onError={e => { e.target.style.display='none'; }}
-            />
-            <img src="/project-9.png" alt="Site delivery" className="w-full object-cover"
-              style={{ minHeight: 192, maxHeight: 240 }} />
+              style={{ width: '100%', minHeight: 192, maxHeight: 240, display: 'block', objectFit: 'cover' }}>
+              <source src="/videos/operations-1.mp4" type="video/mp4" />
+              <img src="/project-9.png" alt="Site delivery" style={{ width: '100%', minHeight: 192, objectFit: 'cover' }} />
+            </video>
             <div className="absolute inset-0 flex flex-col justify-end p-5"
               style={{ background: 'linear-gradient(to top, rgba(0,15,40,0.85) 0%, transparent 60%)' }}>
               <div className="text-xs tracking-widest uppercase font-semibold mb-1"
@@ -179,8 +177,8 @@ function ComplianceSection() {
           {/* Right — containers at port */}
           <div className="relative overflow-hidden group" style={{ minHeight: 380 }}>
             <img
-              src="/containers-port.png"
-              alt="Shipping containers stacked at Nigerian port terminal"
+              src="/cargo-container.png"
+              alt="Wrapped transformer cargo secured inside shipping container"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               style={{ minHeight: 380 }}
             />
@@ -195,8 +193,7 @@ function ComplianceSection() {
               </h3>
               <p className="text-white/60 text-sm leading-relaxed"
                 style={{ fontFamily: 'Barlow, sans-serif' }}>
-                Operating across Apapa, Tin-Can, and all major Nigerian terminals — we know every 
-                process, every gate, every regulation.
+                Transformers, industrial equipment, sensitive cargo — every consignment is wrapped, crated, and secured to international shipping standards before loading.
               </p>
             </div>
           </div>
@@ -464,28 +461,29 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Image collage */}
-            <div className="grid grid-cols-2 gap-3 reveal-scale d2">
-              <div className="img-overlay aspect-square">
-                <img src="/project-12.png"
-                  alt="Port" className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="img-overlay aspect-square mt-8">
-                <img src="/project-8.png"
-                  alt="Air freight" className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="img-overlay aspect-square">
-                <img src="/project-7.png"
-                  alt="Trucks" className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="img-overlay aspect-square mt-8"
-                style={{ background: '#2E8B57' }}>
-                <div className="w-full h-full flex flex-col items-center justify-center text-white p-6 text-center">
-                  <div className="font-display font-black text-5xl text-gold-400">RC</div>
-                  <div className="font-display font-bold text-lg mt-1">718788</div>
-                  <div className="text-xs mt-2 text-white/70 tracking-widest uppercase"
-                    style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Registered Company</div>
+            {/* Video in Advantage section */}
+            <div className="relative overflow-hidden reveal-scale d2" style={{ background: '#001226', minHeight: 420 }}>
+              <video
+                autoPlay muted loop playsInline
+                style={{ width: '100%', height: '100%', minHeight: 420, display: 'block', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}>
+                <source src="/videos/operations-1.mp4" type="video/mp4" />
+              </video>
+              {/* Overlay badge */}
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,18,38,0.7) 0%, transparent 50%)' }} />
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="text-xs font-semibold tracking-[0.2em] uppercase mb-2"
+                  style={{ color: '#C9922A', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                  Raisevision and Company Limited
                 </div>
+                <div className="font-display font-black text-white text-xl uppercase">
+                  Port Operations — Live
+                </div>
+              </div>
+              {/* RC number badge */}
+              <div className="absolute top-5 right-5 px-3 py-2 text-center"
+                style={{ background: '#2E8B57' }}>
+                <div className="font-display font-black text-white text-lg leading-none">RC</div>
+                <div className="font-display font-bold text-white text-sm">718788</div>
               </div>
             </div>
           </div>
