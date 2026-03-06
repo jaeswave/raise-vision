@@ -47,7 +47,7 @@ function VideoShowcase() {
           {/* Main video — Lamborghini / featured vehicle */}
           <div className="md:row-span-2 relative overflow-hidden reveal d1" style={{ background: '#0D1117', minHeight: 400 }}>
             <video
-              src="/videos/lamborghini.mp4"
+              src="/videos/operations-2.mp4"
               autoPlay muted loop playsInline
               className="w-full h-full object-cover"
               style={{ minHeight: 400 }}
@@ -75,7 +75,7 @@ function VideoShowcase() {
                 Operations
               </div>
               <h3 className="font-display font-black text-white text-2xl uppercase">
-                Heavy Haulage & Delivery
+                Raisevision — Operations
               </h3>
             </div>
           </div>
@@ -83,7 +83,7 @@ function VideoShowcase() {
           {/* Secondary video or image */}
           <div className="relative overflow-hidden reveal d2" style={{ background: '#0D1117', minHeight: 192 }}>
             <video
-              src="/videos/vehicle-ops.mp4"
+              src="/videos/operations-1.mp4"
               autoPlay muted loop playsInline
               className="w-full h-full object-cover"
               onError={e => { e.target.style.display='none'; }}
@@ -110,6 +110,120 @@ function VideoShowcase() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+
+// ─── Regulatory & Customs Compliance Feature ─────────────────────────────────
+function ComplianceSection() {
+  const badges = [
+    { label: 'NCS Licensed',      icon: '🛃' },
+    { label: 'NPA Approved',      icon: '⚓' },
+    { label: 'NEPC Registered',   icon: '📋' },
+    { label: 'SON Certified',     icon: '✅' },
+    { label: 'NAFDAC Compliant',  icon: '💊' },
+    { label: 'CAC Incorporated',  icon: '🏛️' },
+  ]
+  return (
+    <section className="py-20" style={{ background: '#001226' }}>
+      <div className="max-w-7xl mx-auto px-6">
+
+        {/* Header */}
+        <div className="text-center mb-14 reveal">
+          <span className="inline-block text-xs font-semibold tracking-[0.25em] uppercase mb-4 px-4 py-1.5"
+            style={{ background: '#C9922A', color: 'white', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+            Regulatory & Customs Compliance
+          </span>
+          <h2 className="font-display font-black text-white uppercase mt-4"
+            style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)', letterSpacing: '0.02em', lineHeight: 0.95 }}>
+            FULLY LICENSED.<br />
+            <span style={{ color: '#2E8B57' }}>FULLY COMPLIANT.</span>
+          </h2>
+          <p className="mt-5 text-white/55 max-w-2xl mx-auto leading-relaxed"
+            style={{ fontFamily: 'Barlow, sans-serif', fontSize: '1rem' }}>
+            Every shipment handled by Raisevision and Company Limited moves through a fully compliant 
+            regulatory framework — from customs clearance to final delivery. We handle the paperwork, 
+            the approvals, and the compliance so you don't have to.
+          </p>
+        </div>
+
+        {/* Two-image split — cargo + containers */}
+        <div className="grid md:grid-cols-2 gap-4 mb-14 reveal d1">
+
+          {/* Left — cargo wrapped (regulatory handling) */}
+          <div className="relative overflow-hidden group" style={{ minHeight: 380 }}>
+            <img
+              src="/compliance-team.png"
+              alt="Raisevision team inspecting transformers at Apapa port"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              style={{ minHeight: 380 }}
+            />
+            <div className="absolute inset-0 flex flex-col justify-end p-7"
+              style={{ background: 'linear-gradient(to top, rgba(0,18,38,0.95) 0%, rgba(0,18,38,0.3) 60%, transparent 100%)' }}>
+              <div className="inline-block self-start text-xs font-semibold tracking-widest uppercase px-3 py-1 mb-3"
+                style={{ background: '#C9922A', color: 'white', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                Cargo Compliance
+              </div>
+              <h3 className="font-display font-black text-white text-2xl uppercase mb-2">
+                On-Site Inspection & Sign-Off
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed"
+                style={{ fontFamily: 'Barlow, sans-serif' }}>
+                Our team physically inspects every consignment at the terminal — verifying documentation, condition, and compliance before release.
+              </p>
+            </div>
+          </div>
+
+          {/* Right — containers at port */}
+          <div className="relative overflow-hidden group" style={{ minHeight: 380 }}>
+            <img
+              src="/containers-port.png"
+              alt="Shipping containers stacked at Nigerian port terminal"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              style={{ minHeight: 380 }}
+            />
+            <div className="absolute inset-0 flex flex-col justify-end p-7"
+              style={{ background: 'linear-gradient(to top, rgba(0,18,38,0.95) 0%, rgba(0,18,38,0.3) 60%, transparent 100%)' }}>
+              <div className="inline-block self-start text-xs font-semibold tracking-widest uppercase px-3 py-1 mb-3"
+                style={{ background: '#2E8B57', color: 'white', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                Port Operations
+              </div>
+              <h3 className="font-display font-black text-white text-2xl uppercase mb-2">
+                Apapa Terminal Specialists
+              </h3>
+              <p className="text-white/60 text-sm leading-relaxed"
+                style={{ fontFamily: 'Barlow, sans-serif' }}>
+                Operating across Apapa, Tin-Can, and all major Nigerian terminals — we know every 
+                process, every gate, every regulation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Compliance badges */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 reveal d2">
+          {[
+            { label: 'NCS Licensed',      icon: '🛃' },
+            { label: 'NPA Approved',      icon: '⚓' },
+            { label: 'NEPC Registered',   icon: '📋' },
+            { label: 'SON Certified',     icon: '✅' },
+            { label: 'NAFDAC Compliant',  icon: '💊' },
+            { label: 'CAC Incorporated',  icon: '🏛️' },
+          ].map(({ label, icon }) => (
+            <div key={label}
+              className="flex flex-col items-center justify-center gap-2 py-5 px-3 text-center border border-white/10 hover:border-white/25 transition-colors duration-200"
+              style={{ background: 'rgba(255,255,255,0.03)' }}>
+              <span className="text-2xl">{icon}</span>
+              <span className="text-white/70 text-xs font-semibold tracking-wider uppercase"
+                style={{ fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   )

@@ -48,7 +48,7 @@ const SERVICES = [
     tagline: 'Stay compliant, avoid penalties.',
     desc: 'We provide advisory services on Nigerian import/export regulations, HS code classification, duty optimisation, and NAFDAC/SON requirements so your business stays compliant and cost-efficient.',
     points: ['HS tariff classification', 'Import duty optimisation', 'NAFDAC & SON advisory', 'Form M processing', 'Trade compliance audits'],
-    img: '/project-8.png',
+    img: '/compliance-team.png',
     color: '#001F4D',
   },
   {
@@ -56,7 +56,7 @@ const SERVICES = [
     tagline: 'Grow your export business with us.',
     desc: 'NEPC registered and experienced in Nigerian export documentation. We assist with NXP forms, NEPC registration, phytosanitary certificates, and connecting exporters with the right buyers.',
     points: ['NXP form processing', 'NEPC advisory & registration', 'Certificate of origin', 'Export finance advisory', 'Phytosanitary support'],
-    img: '/export-advisory-icon.svg',
+    img: '/containers-port.png',
     color: '#C9922A',
   },
 ]
