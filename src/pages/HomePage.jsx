@@ -466,7 +466,7 @@ export default function HomePage() {
               <video
                 autoPlay muted loop playsInline
                 style={{ width: '100%', height: '100%', minHeight: 420, display: 'block', objectFit: 'cover', position: 'absolute', top: 0, left: 0 }}>
-                <source src="/videos/operations-1.mp4" type="video/mp4" />
+                <source src="/videos/operations-2.mp4" type="video/mp4" />
               </video>
               {/* Overlay badge */}
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,18,38,0.7) 0%, transparent 50%)' }} />
