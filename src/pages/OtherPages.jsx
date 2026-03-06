@@ -30,7 +30,7 @@ export function GalleryPage() {
     <>
       <section className="relative py-24" style={{ background: '#001226' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1600&q=80"
+          <img src="/project-17.png"
             alt="Gallery" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-navy-900/80" />
         </div>
@@ -103,7 +103,7 @@ export function ClientsPage() {
     <>
       <section className="relative py-24" style={{ background: '#001226' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80"
+          <img src="/project-12.png"
             alt="Clients" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-navy-900/80" />
         </div>
@@ -231,7 +231,7 @@ export function CertificatesPage() {
     <>
       <section className="relative py-24" style={{ background: '#001226' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80"
+          <img src="/project-4.png"
             alt="Certificates" className="w-full h-full object-cover opacity-20" />
           <div className="absolute inset-0 bg-navy-900/80" />
         </div>
@@ -318,7 +318,7 @@ export function ContactPage() {
     <>
       <section className="relative py-24" style={{ background: '#001226' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80"
+          <img src="/project-13.png"
             alt="Contact" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-navy-900/85" />
         </div>

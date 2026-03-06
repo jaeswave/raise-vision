@@ -16,7 +16,7 @@ const SERVICES = [
     tagline: 'FCL and LCL from any origin worldwide.',
     desc: 'We coordinate FCL and LCL shipments from major global origins. Our established relationships with Maersk, MSC, CMA CGM, PTML Grimaldi, Comet Shipping, PIL, COSCO/OOCL and others ensure competitive rates and priority booking.',
     points: ['FCL & LCL shipments', 'Consolidation services', 'Freight rate negotiation', 'Vessel tracking', 'Port of origin liaison'],
-    img: '/project-11.png',
+    img: '/project-15.png',
     color: '#003380',
   },
   {
@@ -32,7 +32,7 @@ const SERVICES = [
     tagline: 'Inland haulage across all 36 states.',
     desc: 'After clearance, cargo still needs to reach its destination. Our haulage coordination covers last-mile delivery across Nigeria, managed with tracking and accountability.',
     points: ['Nationwide haulage coverage', 'Flatbed & container transport', 'Real-time tracking', 'Cargo insurance', 'Dedicated account management'],
-    img: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80',
+    img: '/project-7.png',
     color: '#1E7A45',
   },
   {
@@ -48,7 +48,7 @@ const SERVICES = [
     tagline: 'Stay compliant, avoid penalties.',
     desc: 'We provide advisory services on Nigerian import/export regulations, HS code classification, duty optimisation, and NAFDAC/SON requirements so your business stays compliant and cost-efficient.',
     points: ['HS tariff classification', 'Import duty optimisation', 'NAFDAC & SON advisory', 'Form M processing', 'Trade compliance audits'],
-    img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
+    img: '/project-8.png',
     color: '#001F4D',
   },
   {
@@ -56,7 +56,7 @@ const SERVICES = [
     tagline: 'Grow your export business with us.',
     desc: 'NEPC registered and experienced in Nigerian export documentation. We assist with NXP forms, NEPC registration, phytosanitary certificates, and connecting exporters with the right buyers.',
     points: ['NXP form processing', 'NEPC advisory & registration', 'Certificate of origin', 'Export finance advisory', 'Phytosanitary support'],
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    img: '/export-advisory-icon.svg',
     color: '#C9922A',
   },
 ]
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       {/* Page Hero */}
       <section className="relative py-24 overflow-hidden" style={{ background: '#001226' }}>
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1600&q=80"
+          <img src="/project-14.png"
             alt="Services" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(0,18,38,0.97) 40%, rgba(0,18,38,0.6))' }} />
         </div>

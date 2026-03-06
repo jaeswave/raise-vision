@@ -47,7 +47,7 @@ export default function AboutPage() {
 
           <div className="space-y-4 reveal-scale d2">
             <div className="img-overlay aspect-video">
-              <img src="https://images.unsplash.com/photo-1494961104209-3c223057bd26?w=900&q=80"
+              <img src="/project-10.png"
                 alt="Port operations" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -80,7 +80,7 @@ export default function AboutPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { name: 'Raisevision & Co. Ltd', role: 'Flagship Company', desc: 'Clearing, forwarding, freight management, customs advisory, and export facilitation. The cornerstone of the group.', accent: '#2E8B57' },
+              { name: 'Raisevision and Company Limited', role: 'Flagship Company', desc: 'Clearing, forwarding, freight management, customs advisory, and export facilitation. The cornerstone of the group.', accent: '#2E8B57' },
               { name: 'Power Cargo International Limited', role: 'Sister Company', desc: 'Specialised cargo handling and power sector logistics. Focused on infrastructure and energy project delivery.', accent: '#001F4D' },
               { name: 'Tookevision Nigeria Ltd', role: 'Sister Company', desc: 'Extended customs and port operations support. Reinforcing the group\'s capacity at all major Nigerian terminals.', accent: '#C9922A' },
             ].map(({ name, role, desc, accent }, i) => (

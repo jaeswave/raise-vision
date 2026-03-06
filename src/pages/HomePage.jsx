@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useReveal'
 
 // Logistics images from Unsplash
-const HERO_BG = '/project-15.png'
-const ABOUT_IMG = '/project-10.png'
+const HERO_BG = '/project-17.png'
+const ABOUT_IMG = '/project-13.png'
 const PORT_IMG = '/project-9.png'
 const AIR_IMG = 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80'
 const ROAD_IMG = '/project-7.png'
@@ -21,6 +21,99 @@ const SERVICES_PREVIEW = [
   { icon: '✈️', title: 'Air Freight', desc: 'Time-critical air cargo handled with speed and full documentation.', img: AIR_IMG },
   { icon: '🚛', title: 'Road Transport', desc: 'Nationwide haulage and last-mile delivery across Nigeria.', img: ROAD_IMG },
 ]
+
+
+// ─── Video Showcase Section ───────────────────────────────────────────
+function VideoShowcase() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 reveal">
+          <div>
+            <span className="section-tag" style={{ color: '#2E8B57' }}>Operations in Motion</span>
+            <h2 className="font-display font-black mt-3 uppercase"
+              style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: '#001F4D', letterSpacing: '0.02em', lineHeight: 0.95 }}>
+              SEE US<br /><span style={{ color: '#2E8B57' }}>AT WORK</span>
+            </h2>
+          </div>
+          <p className="text-gray-500 max-w-sm text-sm leading-relaxed reveal d1" style={{ fontFamily: 'Barlow, sans-serif' }}>
+            From port operations to final-mile delivery — Raisevision and Company Limited handles the full logistics chain with precision.
+          </p>
+        </div>
+
+        {/* Video grid */}
+        <div className="grid md:grid-cols-2 gap-5">
+          {/* Main video — Lamborghini / featured vehicle */}
+          <div className="md:row-span-2 relative overflow-hidden reveal d1" style={{ background: '#0D1117', minHeight: 400 }}>
+            <video
+              src="/videos/lamborghini.mp4"
+              autoPlay muted loop playsInline
+              className="w-full h-full object-cover"
+              style={{ minHeight: 400 }}
+              onError={e => { e.target.style.display='none'; }}
+            />
+            {/* Fallback poster if video not loaded */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center"
+              style={{ background: 'linear-gradient(135deg, #001F4D 0%, #0D1117 100%)' }}>
+              <img src="/project-11.png" alt="Logistics operations" className="w-full h-full object-cover opacity-60" />
+              <div className="absolute inset-0 flex flex-col items-end justify-end p-6"
+                style={{ background: 'linear-gradient(to top, rgba(0,15,40,0.9) 0%, transparent 60%)' }}>
+                <div className="text-xs tracking-widest uppercase font-semibold mb-1"
+                  style={{ color: '#C9922A', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                  Heavy Haulage Operations
+                </div>
+                <h3 className="font-display font-black text-white text-2xl uppercase">
+                  End-to-End Delivery
+                </h3>
+              </div>
+            </div>
+            <div className="absolute inset-0 flex flex-col items-end justify-end p-6 pointer-events-none"
+              style={{ background: 'linear-gradient(to top, rgba(0,15,40,0.85) 0%, transparent 55%)' }}>
+              <div className="text-xs tracking-widest uppercase font-semibold mb-1"
+                style={{ color: '#C9922A', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>
+                Operations
+              </div>
+              <h3 className="font-display font-black text-white text-2xl uppercase">
+                Heavy Haulage & Delivery
+              </h3>
+            </div>
+          </div>
+
+          {/* Secondary video or image */}
+          <div className="relative overflow-hidden reveal d2" style={{ background: '#0D1117', minHeight: 192 }}>
+            <video
+              src="/videos/vehicle-ops.mp4"
+              autoPlay muted loop playsInline
+              className="w-full h-full object-cover"
+              onError={e => { e.target.style.display='none'; }}
+            />
+            <img src="/project-9.png" alt="Site delivery" className="w-full object-cover"
+              style={{ minHeight: 192, maxHeight: 240 }} />
+            <div className="absolute inset-0 flex flex-col justify-end p-5"
+              style={{ background: 'linear-gradient(to top, rgba(0,15,40,0.85) 0%, transparent 60%)' }}>
+              <div className="text-xs tracking-widest uppercase font-semibold mb-1"
+                style={{ color: '#2E8B57', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Live Project</div>
+              <h3 className="font-display font-bold text-white text-xl uppercase">Site Delivery — TCN</h3>
+            </div>
+          </div>
+
+          {/* Third panel */}
+          <div className="relative overflow-hidden reveal d3" style={{ background: '#0D1117', minHeight: 192 }}>
+            <img src="/project-16.png" alt="Crane operations" className="w-full object-cover opacity-80"
+              style={{ minHeight: 192, maxHeight: 240 }} />
+            <div className="absolute inset-0 flex flex-col justify-end p-5"
+              style={{ background: 'linear-gradient(to top, rgba(0,15,40,0.85) 0%, transparent 60%)' }}>
+              <div className="text-xs tracking-widest uppercase font-semibold mb-1"
+                style={{ color: '#2E8B57', fontFamily: 'Barlow Semi Condensed, sans-serif' }}>Apapa Terminal</div>
+              <h3 className="font-display font-bold text-white text-xl uppercase">Crane & Lift Operations</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function HomePage() {
   useScrollReveal()
@@ -260,15 +353,15 @@ export default function HomePage() {
             {/* Image collage */}
             <div className="grid grid-cols-2 gap-3 reveal-scale d2">
               <div className="img-overlay aspect-square">
-                <img src="https://images.unsplash.com/photo-1494961104209-3c223057bd26?w=500&q=80"
+                <img src="/project-12.png"
                   alt="Port" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="img-overlay aspect-square mt-8">
-                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&q=80"
+                <img src="/project-8.png"
                   alt="Air freight" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="img-overlay aspect-square">
-                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&q=80"
+                <img src="/project-7.png"
                   alt="Trucks" className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="img-overlay aspect-square mt-8"
