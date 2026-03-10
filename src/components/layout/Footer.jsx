@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../ui/Logo'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../ui/Logo";
 
 export default function Footer() {
   return (
@@ -97,17 +96,15 @@ export default function Footer() {
                 Coconut Bus Stop, Apapa, Lagos
               </p>
               <div className="space-y-1">
-                {["0803 718 5967", "0809 817 7660", "0802 411 0750"].map(
-                  (n) => (
-                    <a
-                      key={n}
-                      href={`tel:${n.replace(/\s/g, "")}`}
-                      className="block hover:text-white transition-colors"
-                    >
-                      {n}
-                    </a>
-                  ),
-                )}
+                {["0803 718 5967", "0809 817 7660", "0802 4107550"].map((n) => (
+                  <a
+                    key={n}
+                    href={`tel:${n.replace(/\s/g, "")}`}
+                    className="block hover:text-white transition-colors"
+                  >
+                    {n}
+                  </a>
+                ))}
               </div>
               <a
                 href="mailto:info@raisevisionlogistics.com"
@@ -144,7 +141,7 @@ export default function Footer() {
           >
             Follow Us
           </p>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
             <a
               href="https://instagram.com/raisevisionlogistics"
               target="_blank"
