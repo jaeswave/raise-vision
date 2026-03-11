@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useScrollReveal } from "../hooks/useReveal";
 import { useState } from "react";
 
-
 // All real project photos — TCN Power Transformer project, Apapa Port & site delivery
 const GALLERY_IMAGES = [
   {
@@ -637,9 +636,6 @@ export function CertificatesPage() {
   );
 }
 
-
-
-
 export function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -710,41 +706,6 @@ export function ContactPage() {
 
   return (
     <>
-      {/* SEO */}
-      <title>Contact Raisevision Logistics | Freight Forwarding Lagos</title>
-      <meta
-        name="description"
-        content="Contact Raisevision and Company Limited in Apapa Lagos for professional clearing and forwarding, sea freight, air freight, road transport and logistics services."
-      />
-      <meta
-        name="keywords"
-        content="logistics company Lagos, freight forwarding Lagos, clearing and forwarding Apapa, Nigeria logistics company"
-      />
-      <link rel="canonical" href="https://raisevisionlogistics.com/contact" />
-
-      {/* Local Business Schema */}
-      <script type="application/ld+json">
-        {`
-{
- "@context": "https://schema.org",
- "@type": "LogisticsBusiness",
- "name": "Raisevision and Company Limited",
- "image": "https://raisevisionlogistics.com/logo.png",
- "address": {
-   "@type": "PostalAddress",
-   "streetAddress": "4/5 Apapa–Oshodi Expressway",
-   "addressLocality": "Apapa",
-   "addressRegion": "Lagos",
-   "postalCode": "101233",
-   "addressCountry": "Nigeria"
- },
- "telephone": "+2348037185967",
- "email": "info@raisevisionlogistics.com",
- "url": "https://raisevisionlogistics.com"
-}
-`}
-      </script>
-
       {/* HERO */}
       <section className="relative py-24" style={{ background: "#001226" }}>
         <div className="absolute inset-0">
@@ -1019,5 +980,3 @@ export function ContactPage() {
     </>
   );
 }
-
-
