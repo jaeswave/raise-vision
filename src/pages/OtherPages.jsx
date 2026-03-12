@@ -706,7 +706,7 @@ export function ContactPage() {
 
   return (
     <>
-      {/* HERO */}
+       {/* HERO */}
       <section className="relative py-24" style={{ background: "#001226" }}>
         <div className="absolute inset-0">
           <img
